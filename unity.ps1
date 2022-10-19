@@ -16,6 +16,8 @@ try {
     Start-Process UnityHubSetup.exe -ArgumentList $INSTALLER_ARGS -ea SilentlyContinue -Wait
     Clear-Host
     Write-Host "Installazione completata!" -ForegroundColor Black -BackgroundColor Green
+    Start-Sleep -Seconds 1
+    Remove-Item UnityHubSetup.exe
 } catch {
     Clear-Host
     Write-Host "Houston! Abbiamo un problema!" -ForegroundColor Black -BackgroundColor Red
